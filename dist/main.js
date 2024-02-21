@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("Hello World!"),document.querySelector("#content").appendChild(component())})();
+(()=>{"use strict";console.log("Hello World!"),component()})();
