@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(63, 19, 19);
+    background-color: rgb(39, 18, 5);
     text-align: center;
     background-image: url('./img.jpg');
 
@@ -25,7 +25,7 @@ header {
 }
 
 button {
-    background-color:rgb(63, 19, 19);
+    background-color:rgb(39, 18, 5);
     color: white;
     font-weight:bold;
     padding: 20px;
@@ -34,22 +34,21 @@ button {
 }
 
 #content {
-    background: rgba(87, 42, 16, 0.9);
-    color: rgba(169, 173, 113, 0.9);
+    background: rgba(39, 18, 5, 0.9);
+    color: rgba(197, 201, 152, 0.9);
     width: 600px;
     padding: 10px;
     margin: 0 auto;
-    border: 1px solid rgb(11, 36, 11);
+    border: 1px solid rgb(66, 44, 19);
     border-radius: 20px 20px;
     font-weight: bold;
 }
 
 footer {
     position: fixed;
-    left: 0;
+    right: 0;
     bottom: 0;
-    width: 100%;
-    color: rgb(63, 19, 19);
-    font-weight: bold;
     
+    color: rgb(0, 0, 0);
+    font-weight: bold;    
 }
