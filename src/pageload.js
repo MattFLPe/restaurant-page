@@ -4,9 +4,9 @@ import margherita from './margherita.jpg'
 import cheese from './cheese.jpg'
 import california from './california.jpg'
 
-export function pageLoad() {
+const element = document.getElementById("content");
 
-    const element = document.getElementById("content");
+export function pageLoad() {
 
     const Fact = document.createElement("h4");
     const contentFact = document.createTextNode("Since 1265");
@@ -30,7 +30,6 @@ export function pageLoad() {
     element.appendChild(title);
     title.style.marginBottom = "20px";
 
-    
     const para = document.createElement('p');
     const paraContent = document.createTextNode(`Welcome to Alighieri's – where passion meets flavor! 
     Step into a world of delicious indulgence, where every slice tells a story of craftsmanship and love for the art of pizza-making!`);
@@ -38,12 +37,10 @@ export function pageLoad() {
     element.appendChild(para);
     para.style.width = "500px";
     para.style.margin = "0 auto";
-
-}
+};
 
 
 export function menuLoad() {
-    const element = document.querySelector("#content")
 
     const title = document.createElement("h1");
     const contentTitle = document.createTextNode("Alighieri's Pizzeria");
@@ -99,7 +96,6 @@ export function menuLoad() {
     element.appendChild(thirdItem);
     thirdItem.style.marginBottom = "20px"
 
-
     const California = new Image();
     California.src = california;
     element.appendChild(California)
@@ -115,5 +111,61 @@ export function menuLoad() {
 };
 
 export function aboutLoad() {
+
+    const aboutUs = document.createElement("h1")
+    const aboutContent = document.createTextNode("About us")
+    aboutUs.appendChild(aboutContent);
+    element.appendChild(aboutUs);
+    aboutUs.style.marginBottom = '20px';
+
+    const aboutUsPara = document.createElement('p')
+    aboutUsPara.innerHTML = `
+    Welcome to Alighieri's, where our philosophy revolves around the artistry of crafting exceptional pizzas that transcend the ordinary.
+    We believe that a great pizza is not just a dish; it's an experience that brings people together, creating moments of joy and connection.
+    At Alighieri's, we are driven by a passion for quality ingredients, meticulous craftsmanship, and a commitment to delivering flavors that ignite the senses. 
+    Our philosophy is rooted in the belief that every pizza should tell a story – a story of authenticity, creativity, and the pursuit of culinary excellence.`
+    aboutUsPara.style.marginBottom = "20px"
+    element.appendChild(aboutUsPara);
     
-}
+    const contactTitle = document.createElement("h1")
+    const titleContent = document.createTextNode("Contact information")
+    contactTitle.appendChild(titleContent);
+    element.appendChild(contactTitle);
+    contactTitle.style.marginBottom = "20px";
+    const contactPara = document.createElement('p')
+    contactPara.innerHTML = `9th Circle, Hells Kitchen, USA
+    <br>
+    (555) 555-1234
+    <br>
+    example@email.co.us`
+    contactPara.style.marginBottom = "20px";
+    element.appendChild(contactPara);
+
+    const openingHours = document.createElement("h1")
+    const openingContent = document.createTextNode("Opening hours")
+    openingHours.appendChild(openingContent);
+    element.appendChild(openingHours);
+    openingHours.style.marginBottom = '20px';
+    const openingHoursPara = document.createElement('p')
+    openingHoursPara.innerHTML = `Monday
+    09:30-18:00
+    <br>
+    Tuesday
+    09:30-18:00
+    <br>
+    Wednesday
+    09:30-18:00
+    <br>
+    Thursday
+    09:30-18:00
+    <br>
+    Friday
+    09:30-17:30
+    <br>
+    Saturday
+    10:00-16:00
+    <br>
+    Sunday
+    Closed`
+    element.appendChild(openingHoursPara);  
+};

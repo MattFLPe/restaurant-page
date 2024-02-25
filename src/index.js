@@ -1,11 +1,12 @@
-import { pageLoad, menuLoad } from './pageload.js';
+import { pageLoad, menuLoad, aboutLoad } from './pageload.js';
 import './style.css';
 
-
+pageLoad();
 console.log("Hello World!")
+const contentPage = document.querySelector("#content")
 const homeBtn = document.querySelector(".home")
 homeBtn.addEventListener('click', function() {
-    const contentPage = document.querySelector("#content")
+    contentPage.innerHTML = ''
     pageLoad();
     return contentPage;
 });
@@ -13,14 +14,13 @@ homeBtn.addEventListener('click', function() {
 
 const menuBtn = document.querySelector(".menu")
 menuBtn.addEventListener('click', function() {
-    const contentPage = document.querySelector("#content");
     contentPage.innerHTML = ''
-   menuLoad();
-
+    menuLoad();
 });
 
 
 const aboutBtn = document.querySelector(".about")
 aboutBtn.addEventListener('click', function() {
-
+    contentPage.innerHTML = ''
+    aboutLoad();
 })
